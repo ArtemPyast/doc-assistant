@@ -1,6 +1,7 @@
 venv/
 __pycache__/
 *.pyc
-data/
+data/raw
+data/processed/clean.csv
 models/
 .ipynb_checkpoints/
