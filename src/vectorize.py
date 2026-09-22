@@ -4,7 +4,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.preprocessing import LabelEncoder
 
 def get_prepared_data():
-    df = pd.read_csv("data/processed.clean.csv")
+    df = pd.read_csv("..\\data\\processed\\clean.csv")
     
     vectorizer = TfidfVectorizer(max_features=1000)
     X_numpy = vectorizer.fit_transform(df["text"]).toarray() #nazvat po drugomu
