@@ -4,5 +4,6 @@ __pycache__/
 data/raw
 data/processed/clean.csv
 models/
+.env
 .ipynb_checkpoints/
 
