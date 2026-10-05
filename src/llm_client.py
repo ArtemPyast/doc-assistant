@@ -6,13 +6,13 @@ load_dotenv()
 
 def ask_gigachat(promt: str, temperature: float = 0.3) -> str:
     credentials = os.getenv("GIGACHAT_CREDENTIALS")
-    
+
     if not credentials:
         raise ValueError("Ошибка: Переменная GIGACHAT_CREDENTIALS не найдена в .env")
     
     with GigaChat(credentials=credentials, verify_ssl_certs=False) as giga:
         response = giga.chat({
-            "model": "GigaChat",
+            "model": "GigaChat-3-Lightning",
             "temperature": temperature,
             "max_tokens": 1000,
             "messages": [
@@ -22,7 +22,7 @@ def ask_gigachat(promt: str, temperature: float = 0.3) -> str:
                 }
             ]
         })
-        return response.choices[0].messages.content
+        return response.choices[0].message.content
     
 if __name__ == "__main__":
     print("Проверка связи с GigaChat")
