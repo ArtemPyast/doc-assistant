@@ -1,0 +1,10 @@
+__pycache__
+*.pyc
+.git
+.dvc
+dvc.lock
+dvc.yaml
+notebooks/
+models/
+.env
+mlruns/
